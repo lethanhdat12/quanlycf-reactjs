@@ -15,6 +15,8 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/vendor/boostrap/sb-admin-2.min.css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/vendor/boostrap/all.min.css">
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -27,6 +29,28 @@
     <title>React App</title>
   </head>
   <body>
+    
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '375726126835414',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v9.0'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
@@ -39,5 +63,9 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script src="%PUBLIC_URL%/vendor/js/jquery.min.js"></script>
+    <script src="%PUBLIC_URL%/vendor/js/bootstrap.bundle.min.js"></script>
+    <script src="%PUBLIC_URL%/vendor/js/jquery.easing.min.js"></script>
+    <script src="%PUBLIC_URL%/vendor/js/sb-admin-2.min.js"></script>
   </body>
 </html>
